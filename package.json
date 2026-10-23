@@ -1,0 +1,59 @@
+{
+  "name": "cause",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=.env server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "start": "tsx --env-file-if-exists=.env server/index.ts",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:stress": "tsx scripts/stress.ts",
+    "backup": "tsx scripts/backup.ts",
+    "restore": "tsx scripts/restore.ts"
+  },
+  "dependencies": {
+    "@tesseract.js-data/eng": "1.0.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "archiver": "8.0.0",
+    "csv-parse": "7.0.3",
+    "express": "5.3.0",
+    "express-rate-limit": "8.7.1",
+    "helmet": "8.3.0",
+    "lucide-react": "1.61.0",
+    "mailparser": "3.12.4",
+    "multer": "2.5.0",
+    "openai": "7.43.0",
+    "pdf-parse": "2.4.5",
+    "pdfkit": "0.20.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "sharp": "^0.35.5",
+    "tesseract.js": "7.0.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@sparticuz/chromium": "153.0.0",
+    "@types/archiver": "8.0.0",
+    "@types/express": "5.0.6",
+    "@types/mailparser": "3.9.0",
+    "@types/multer": "2.3.0",
+    "@types/node": "26.6.5",
+    "@types/pdfkit": "0.17.7",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/supertest": "7.2.1",
+    "fflate": "0.8.3",
+    "prettier": "3.9.10",
+    "supertest": "7.3.1",
+    "vitest": "5.0.5"
+  },
+  "engines": {
+    "node": ">=24.19.0"
+  }
+}

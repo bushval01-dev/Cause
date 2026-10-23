@@ -1,0 +1,19 @@
+services:
+  cause:
+    build: .
+    restart: unless-stopped
+    init: true
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      NODE_ENV: production
+      DATA_DIR: /data
+      ENABLE_DEMO: "false"
+      ALLOW_DEMO_AI: "false"
+    volumes:
+      - cause-data:/data
+    mem_limit: 2g
+    cpus: 2
+    stop_grace_period: 20s
+volumes:
+  cause-data:
